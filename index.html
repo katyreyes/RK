@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Diseño Gráfico</title>
+    <!-- Tipografías: Playfair Display para serif, Roboto para sans-serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #651413;
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #651413;
+            background-size: cover;
+            background-position: center;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            /* Estilos para el logo, ahora como imagen */
+            width: 100%;
+            max-width: 130px;
+            height: auto;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: #FFFFFF;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #FAD5D7;
+        }
+
+        /* HERO */
+        .hero {
+            background-image: url('https://source.unsplash.com/random/1920x1080/?fashion,magazine'); /* Placeholder de imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            background-color: #FAD5D7;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #6f1313;
+            padding: 0 0px;
+            position: relative;
+        }
+
+        .hero .title-image {
+            width: 110%;
+            max-width: cover;
+            height: auto;
+        }
+
+        .hero p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            max-width: 600px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* SECCIÓN SOBRE MÍ */
+        .about {
+            padding: cover;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            max-width: 1200px;
+            background-color: #FFFFFF;
+            margin: 130px;
+        }
+
+        .about .title-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+
+        .about .text {
+            flex: 1;
+            padding-left: 40px;
+        }
+
+        .about p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            color: #651413;
+        }
+
+        /* SECCIÓN HABILIDADES */
+        .skills {
+            padding: 100px 20px;
+            background-color: #651413;
+            text-align: center;
+        }
+
+        .skills .title-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skill-item {
+       
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .skill-item img {
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+        }
+
+        .creative-skills {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            text-align: center;
+        }
+
+        .creative-skills .title-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        .creative-skills p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            color: #FAD5D7;
+            line-height: 1.6;
+        }
+    
+        /* SECCIÓN PORTAFOLIO */
+        .portfolio {
+            padding: 100px 20px;
+            background-color: #FFFFFF;
+            text-align: center;
+        }
+
+        .portfolio .title-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            align-items: center;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+    
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .portfolio-item img {
+            align-items: center;
+            width: 60%;
+            height: auto;
+            display: block;
+        }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            text-align: left;
+        }
+
+        .modal-content .title-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+
+        .modal-content p {
+            color: #651413;
+            margin-bottom: 20px;
+        }
+
+        .close {
+            color: #651413;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #651413;
+            color: #FFFFFF;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer .title-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #FAD5D7;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            color: #FFFFFF;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100px;
+                right: 20px;
+                background-color: rgba(255,255,255,0.9);
+                padding: 10px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero .title-image {
+                max-width: cover;
+            }
+
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about .text {
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <a href="#hero">
+                <img src="logo 2.png" alt="Logo" width="80" height="auto" />
+            </a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#portfolio">Portafolio</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <img src="portada web.png" alt="Título Hero" class="title-image" width="600" height="auto" /> <!-- Ruta relativa para imagen local -->
+    </section>
+
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section id="about" class="about">
+        <img src="sobre mi.png" alt="Sobre mí" class="title-image" width="400" height="auto" /> <!-- Ruta relativa para imagen local -->
+        <div class="text">
+            <p>Soy Katy Reyes una diseñadora gráfica jr. con una fuerte inclinación hacia lo visual, la fotografía y la construcción de identidades que conectan emocionalmente con las personas. Me caracterizo por mi atención al detalle, mi estilo estético y mi habilidad para transformar ideas en conceptos claros y visualmente atractivos. Me gusta experimentar con nuevas ideas, tendencias y referencias para desarrollar propuestas originales.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN HABILIDADES -->
+    <section id="skills" class="skills">
+        <img src="herramientas.png" alt="Habilidades" class="title-image" width="500" height="auto" /> <!-- Ruta relativa para imagen local -->
+        <div class="skills-grid">
+            <div class="skill-item">
+                <img src="Recurso 8.png" alt="Software 1" width="100" height="auto" /> <!-- Ruta relativa para imagen local -->
+            </div>
+            <div class="skill-item">
+                <img src="Recurso 10.png" alt="Software 2" width="100" height="auto" /> <!-- Ruta relativa para imagen local -->
+            </div>
+            <div class="skill-item">
+                <img src="Recurso 9.png" alt="Software 3" width="100" height="auto" /> <!-- Ruta relativa para imagen local -->
+            </div>
+            <div class="skill-item">
+                <img src="Recurso 11.png" alt="Software 4" width="100" height="auto" /> <!-- Ruta relativa para imagen local -->
+            </div>
+            <div class="skill-item">
+                <img src="Recurso 13.png" alt="Software 5" width="100" height="auto" /> <!-- Ruta relativa para imagen local -->
+            </div>
+        </div>
+        <div class="creative-skills">
+            <img src="habilidades.png" alt="Habilidades Creativas" class="title-image" width="500" height="auto" /> <!-- Ruta relativa para imagen local -->
+            <p> Mis habilidades incluyen identidad visual, ilustración digital, diseño editorial y social media. Me interesan las estéticas minimalistas, la fotografía, el color y crear piezas</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PORTAFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <img src="Recurso 26.png" alt="Portafolio" class="title-image" width="350" height="auto" /> <!-- Ruta relativa para imagen local -->
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <a href="Fotografía.html">
+                    <img src="Recurso 22.png" alt="Fotografía" width="50px" height="auto" /> <!-- Ruta relativa para imagen local -->
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="Manual corto.pdf">
+                    <img src="Recurso 23.png" alt="Branding" width="50px" height="auto" /> <!-- Ruta relativa para imagen local -->
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://www.instagram.com/minicityaz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <img src="Recurso 21.png" alt="Social media" width="50px" height="auto" /> <!-- Ruta relativa para imagen local -->
+                </a>
+            </div> 
+        </div>
+    </section>
+
+    <!-- MODALES -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <img src="img/titulo-logotipos.png" alt="Logotipos" class="title-image" width="300" height="auto" /> <!-- Ruta relativa para imagen local -->
+            <p>Descripción detallada del proyecto de logotipos. Incluye imágenes, procesos y resultados.</p>
+            <img src="https://source.unsplash.com/random/400x400/?portrait,designer" alt="Foto de perfil" width="400" height="400" />
+
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <img src="img/titulo-fotografia.png" alt="Fotografía" class="title-image" width="300" height="auto" /> <!-- Ruta relativa para imagen local -->
+            <p>Descripción detallada del proyecto de fotografía. Incluye imágenes, técnicas y estilo.</p>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <img src="img/titulo-branding.png" alt="Branding" class="title-image" width="300" height="auto" /> <!-- Ruta relativa para imagen local -->
+            <p>Descripción detallada del proyecto de branding. Incluye identidad visual completa.</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <img src="Recurso 25.png" alt="Contacto" class="title-image" width="400" height="auto" /> <!-- Ruta relativa para imagen local -->
+        <p>Email: katy.reyes2904@gmail.com</p>
+        <p>Tel:  8131304734</p>
+        <p>Ubicación: Monterrey N.L, México</p>
+        <div class="social-links">
+
+        </div>
+        <p>&copy; 2023 Mi Portafolio. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // JS para menú hamburguesa
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // JS para modales
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Cerrar modal al hacer clic fuera
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

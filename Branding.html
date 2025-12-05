@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos de Branding</title>
+    <!-- Importación de la fuente Roboto desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico para consistencia */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FAD5D7;
+            color: #651413;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #FAD5D7;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(101, 20, 19, 0.1); /* Línea sutil para separación */
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Sección de Proyectos */
+        .projects-section {
+            padding: 60px 0; /* Padding vertical, horizontal 0 para que las imágenes ocupen ancho completo */
+        }
+
+        .projects-title {
+            text-align: center;
+            margin-bottom: 50px;
+            max-width: 400px; /* Ajusta el tamaño según necesites */
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .project-apartado {
+            margin-bottom: 80px; /* Espacio entre apartados */
+        }
+
+        .project-image {
+            width: 100vw; /* Ancho completo de la pantalla */
+            height: 400px; /* Altura fija, ajusta según necesites */
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-content {
+            max-width: 1200px; /* Contenido centrado con ancho máximo */
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .project-description {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #651413;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .project-secondary-image {
+            width: 100vw; /* Ancho completo de la pantalla */
+            height: 400px; /* Altura fija, ajusta según necesites */
+            object-fit: cover;
+            display: block;
+            margin-top: 40px; /* Espacio arriba de la imagen secundaria */
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .project-image, .project-secondary-image {
+                height: 300px;
+            }
+            .project-content {
+                padding: 30px 15px;
+            }
+            .project-description {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 30px 15px;
+            }
+            .projects-section {
+                padding: 40px 0;
+            }
+            .projects-title {
+                max-width: 250px;
+                margin-bottom: 30px;
+            }
+            .project-apartado {
+                margin-bottom: 60px;
+            }
+            .project-image, .project-secondary-image {
+                height: 250px;
+            }
+            .project-content {
+                padding: 20px 15px;
+            }
+            .project-description {
+                font-size: 0.9rem;
+            }
+            .project-secondary-image {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+   <header>
+        <a href="index.html"> <!-- Cambia "index.html" por la URL de la página a la que quieres enlazar -->
+            <img src="https://via.placeholder.com/150x50/651413/FFFFFF?text=Logo" alt="Logo de la Galería">
+        </a>
+    </header>
+    <!-- Sección de Proyectos -->
+    <section class="projects-section">
+        <img src="https://via.placeholder.com/400x100?text=Titulo+Proyectos" alt="Título de Proyectos de Branding" class="projects-title">
+        
+        <!-- Apartado Proyecto 1 -->
+        <div class="project-apartado">
+            <div class="project-content">
+            <img src="https://via.placeholder.com/1920x400?text=Imagen+Secundaria+1" alt="Imagen del Proyecto 1" class="project-secondary-image">
+
+                <p class="project-description">Breve descripción del proyecto de branding 1. Enfocado en identidad visual moderna y atractiva. Esta imagen ocupa el ancho completo de la pantalla para un impacto visual máximo.</p>
+                <img src="https://via.placeholder.com/1920x400?text=Imagen+Secundaria+1" alt="Imagen secundaria del Proyecto 1" class="project-secondary-image">
+            </div>
+        </div>
+        
+        <!-- Apartado Proyecto 2 -->
+        <div class="project-apartado">
+        <img src="https://via.placeholder.com/1920x400?text=Imagen+Secundaria+1" alt="Imagen del Proyecto 2" class="project-secondary-image">
+
+            <div class="project-content">
+                <p class="project-description">Breve descripción del proyecto de branding 2. Diseño minimalista con toques elegantes. Las imágenes se adaptan a diferentes tamaños de pantalla manteniendo la estética.</p>
+                <img src="https://via.placeholder.com/1920x400?text=Imagen+Secundaria+2" alt="Imagen secundaria del Proyecto 2" class="project-secondary-image">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

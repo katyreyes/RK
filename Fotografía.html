@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Fotográfica</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FAD5D7;
+            font-family: 'Roboto', sans-serif;
+            color: #651413;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: #FAD5D7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header a {
+            text-decoration: none; /* Elimina el subrayado del enlace */
+        }
+
+        header img {
+            max-width: 150px;
+            height: auto;
+            transition: opacity 0.3s ease; /* Efecto sutil al hover */
+        }
+
+        header img:hover {
+            opacity: 0.8; /* Efecto hover sutil en la imagen */
+        }
+
+        main {
+            width: 100%;
+            max-width: 1400px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"> <!-- Cambia "index.html" por la URL de la página a la que quieres enlazar -->
+            <img src="logo rojo.png" alt="Logo de la Galería">
+        </a>
+    </header>
+    <main>
+        <div class="gallery">
+            <img src="DSC_4752.jpeg" alt="Fotografía 1">
+            <img src="DSC_4790.jpeg" alt="Fotografía 2">
+            <img src="DSC_4786.jpeg" alt="Fotografía 3">
+            <img src="DSC_4781.jpeg" alt="Fotografía 4">
+            <img src="DSC_4819.jpeg" alt="Fotografía 5">
+            <img src="DSC_4847.jpeg" alt="Fotografía 6">
+            <img src="DSC_4848.jpeg" alt="Fotografía 7">
+            <img src="DSC_4740.jpeg" alt="Fotografía 8">
+        </div>
+    </main>
+</body>
+</html>
