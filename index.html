@@ -204,6 +204,7 @@
             padding: 100px 20px;
             background-color: #FFFFFF;
             text-align: center;
+            margin: 1000;
         }
 
         .portfolio .title-image {
@@ -219,12 +220,19 @@
             gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            margin-left: 330px;
+            margin-right: 100px;
+            margin-top: 50px; /* Separación adicional del título */
         }
 
         .portfolio-item {
     
             transition: transform 0.3s;
             position: relative;
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
+            display: block;
         }
 
         .portfolio-item:hover {
@@ -232,14 +240,18 @@
         }
 
         .portfolio-item a {
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
             display: block;
             text-decoration: none;
         }
 
         .portfolio-item img {
             align-items: center;
-            width: 60%;
-            height: auto;
+            width: 220px; /* Tamaño fijo para consistencia */
+            height: 220px;
+            object-fit: contain;
             display: block;
         }
 
@@ -261,14 +273,14 @@
             background-color: #FFFFFF;
             padding: 20px;
             border-radius: 10px;
-            max-width: 600px;
+            max-width: 300px;
             width: 90%;
-            text-align: left;
+            text-align: center;
         }
 
         .modal-content .title-image {
             width: 100%;
-            max-width: 300px;
+            max-width: 100px;
             height: auto;
         }
 
@@ -295,7 +307,7 @@
 
         footer .title-image {
             width: 100%;
-            max-width: 400px;
+            max-width: 200px;
             height: auto;
         }
 
@@ -383,12 +395,12 @@
 
     <!-- HERO -->
     <section id="hero" class="hero">
-        <img src="portada web.png" alt="Título Hero" class="title-image" width="600" height="auto" /> <!-- Ruta relativa para imagen local -->
+        <img src="portada web.png" alt="Título Hero" class="title-image" width="600" height="auto" />
     </section>
 
     <!-- SECCIÓN SOBRE MÍ -->
     <section id="about" class="about">
-        <img src="sobre mi.png" alt="Sobre mí" class="title-image" width="400" height="auto" /> <!-- Ruta relativa para imagen local -->
+        <img src="sobre mi.png" alt="Sobre mí" class="title-image" width="400" height="auto" />
         <div class="text">
             <p>Soy Katy Reyes una diseñadora gráfica jr. con una fuerte inclinación hacia lo visual, la fotografía y la construcción de identidades que conectan emocionalmente con las personas. Me caracterizo por mi atención al detalle, mi estilo estético y mi habilidad para transformar ideas en conceptos claros y visualmente atractivos. Me gusta experimentar con nuevas ideas, tendencias y referencias para desarrollar propuestas originales.</p>
         </div>
@@ -396,49 +408,55 @@
 
     <!-- SECCIÓN HABILIDADES -->
     <section id="skills" class="skills">
-        <img src="herramientas.png" alt="Habilidades" class="title-image" width="500" height="auto" /> <!-- Ruta relativa para imagen local -->
+        <img src="herramientas.png" alt="Habilidades" class="title-image" width="500" height="auto" />
         <div class="skills-grid">
             <div class="skill-item">
-                <img src="Recurso 8.png" alt="Software 1" width="100" height="auto" /> <!-- Ruta relativa para imagen local -->
+                <img src="Recurso 8.png" alt="Software 1" width="100" height="auto" />
             </div>
             <div class="skill-item">
-                <img src="Recurso 10.png" alt="Software 2" width="100" height="auto" /> <!-- Ruta relativa para imagen local -->
+                <img src="Recurso 10.png" alt="Software 2" width="100" height="auto" />
             </div>
             <div class="skill-item">
-                <img src="Recurso 9.png" alt="Software 3" width="100" height="auto" /> <!-- Ruta relativa para imagen local -->
+                <img src="Recurso 9.png" alt="Software 3" width="100" height="auto" />
             </div>
             <div class="skill-item">
-                <img src="Recurso 11.png" alt="Software 4" width="100" height="auto" /> <!-- Ruta relativa para imagen local -->
+                <img src="Recurso 11.png" alt="Software 4" width="100" height="auto" />
             </div>
             <div class="skill-item">
-                <img src="Recurso 13.png" alt="Software 5" width="100" height="auto" /> <!-- Ruta relativa para imagen local -->
+                <img src="Recurso 13.png" alt="Software 5" width="100" height="auto" />
             </div>
         </div>
         <div class="creative-skills">
-            <img src="habilidades.png" alt="Habilidades Creativas" class="title-image" width="500" height="auto" /> <!-- Ruta relativa para imagen local -->
+            <img src="habilidades.png" alt="Habilidades Creativas" class="title-image" width="500" height="auto" />
             <p> Mis habilidades incluyen identidad visual, ilustración digital, diseño editorial y social media. Me interesan las estéticas minimalistas, la fotografía, el color y crear piezas</p>
         </div>
     </section>
 
-    <!-- SECCIÓN PORTAFOLIO -->
-    <section id="portfolio" class="portfolio">
-        <img src="Recurso 26.png" alt="Portafolio" class="title-image" width="350" height="auto" /> <!-- Ruta relativa para imagen local -->
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <a href="Fotografía.html">
-                    <img src="Recurso 22.png" alt="Fotografía" width="50px" height="auto" /> <!-- Ruta relativa para imagen local -->
-                </a>
-            </div>
-            <div class="portfolio-item">
-                <a href="Manual corto.pdf">
-                    <img src="Recurso 23.png" alt="Branding" width="50px" height="auto" /> <!-- Ruta relativa para imagen local -->
-                </a>
-            </div>
-            <div class="portfolio-item">
-                <a href="https://www.instagram.com/minicityaz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                    <img src="Recurso 21.png" alt="Social media" width="50px" height="auto" /> <!-- Ruta relativa para imagen local -->
-                </a>
-            </div> 
+   <!-- SECCIÓN PORTAFOLIO -->
+<section id="portfolio" class="portfolio">
+    <img src="Recurso 26.png" alt="Portafolio" class="title-image" width="350" height="auto" />
+
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <a href="Fotografía.html">
+                <img src="Recurso 28.png" alt="Fotografía" class="portfolio-icon" width="200" height="auto" />
+            </a>
+        </div>
+
+        <div class="portfolio-item">
+            <a href="Manual corto.pdf">
+                <img src="Recurso 29.png" alt="Branding" class="portfolio-icon" width="50px" height="auto" />
+            </a>
+        </div>
+
+        <div class="portfolio-item">
+            <a href="https://www.instagram.com/minicityaz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                <img src="Recurso 31.png" alt="Social media" class="portfolio-icon" width="300px" height="400px" />
+            </a>
+        </div>
+    </div>
+</section>
+
         </div>
     </section>
 
@@ -446,7 +464,7 @@
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <img src="img/titulo-logotipos.png" alt="Logotipos" class="title-image" width="300" height="auto" /> <!-- Ruta relativa para imagen local -->
+            <img src="img/titulo-logotipos.png" alt="Logotipos" class="title-image" width="100" height="auto" />
             <p>Descripción detallada del proyecto de logotipos. Incluye imágenes, procesos y resultados.</p>
             <img src="https://source.unsplash.com/random/400x400/?portrait,designer" alt="Foto de perfil" width="400" height="400" />
 
@@ -455,28 +473,28 @@
     <div id="modal2" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <img src="img/titulo-fotografia.png" alt="Fotografía" class="title-image" width="300" height="auto" /> <!-- Ruta relativa para imagen local -->
+            <img src="img/titulo-fotografia.png" alt="Fotografía" class="title-image" width="100" height="auto" />
             <p>Descripción detallada del proyecto de fotografía. Incluye imágenes, técnicas y estilo.</p>
         </div>
     </div>
     <div id="modal3" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal3')">&times;</span>
-            <img src="img/titulo-branding.png" alt="Branding" class="title-image" width="300" height="auto" /> <!-- Ruta relativa para imagen local -->
+            <img src="img/titulo-branding.png" alt="Branding" class="title-image" width="100" height="auto" />
             <p>Descripción detallada del proyecto de branding. Incluye identidad visual completa.</p>
         </div>
     </div>
 
     <!-- FOOTER -->
     <footer id="contact">
-        <img src="Recurso 25.png" alt="Contacto" class="title-image" width="400" height="auto" /> <!-- Ruta relativa para imagen local -->
+        <img src="Recurso 25.png" alt="Contacto" class="title-image" width="200" height="auto" />
         <p>Email: katy.reyes2904@gmail.com</p>
         <p>Tel:  8131304734</p>
         <p>Ubicación: Monterrey N.L, México</p>
         <div class="social-links">
 
         </div>
-        <p>&copy; 2023 Mi Portafolio. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Mi Portafolio. Todos los derechos reservados.</p>
     </footer>
 
     <script>
